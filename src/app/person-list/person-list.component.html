@@ -1,0 +1,8 @@
+
+<h1> Persons</h1>
+<input [(ngModel)]="searchText" placeholder="Filter Games" class="filter-input">
+
+<div *ngFor="let person of persons | filter : searchText | async">
+  <span>{{person.personId}}</span>
+  <span>{{person.name}}</span>
+</div>

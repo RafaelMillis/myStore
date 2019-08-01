@@ -1,0 +1,9 @@
+
+<h2>Persons</h2>
+
+<div *ngFor="let person of persons | async; index as personId">
+  <a [title]= "person.name + 'description' " [routerLink]="['/personstest', personId]" >
+    <span>{{person.name}}</span>
+  </a>
+    <span>{{person.personId}}</span>
+</div>
